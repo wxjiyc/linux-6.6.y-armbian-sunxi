@@ -1,0 +1,2 @@
+sun50i-h616-tft35_spi.o: \
+ arch/arm64/boot/dts/allwinner/overlay/sun50i-h616-tft35_spi.dtso

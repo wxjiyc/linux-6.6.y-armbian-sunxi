@@ -1,0 +1,5 @@
+sun50i-a64-pine64-7inch-lcd.o: \
+ arch/arm64/boot/dts/allwinner/overlay/sun50i-a64-pine64-7inch-lcd.dtso \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/pwm/pwm.h

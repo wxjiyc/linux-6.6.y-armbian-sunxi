@@ -1,0 +1,21 @@
+# 0 "arch/arm64/boot/dts/allwinner/overlay/sun50i-h5-analog-codec.dtso"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "arch/arm64/boot/dts/allwinner/overlay/sun50i-h5-analog-codec.dtso"
+/dts-v1/;
+/plugin/;
+
+/ {
+ compatible = "allwinner,sun50i-h5";
+
+ fragment@0 {
+  target = <&codec>;
+  __overlay__ {
+   allwinner,audio-routing =
+    "Line Out", "LINEOUT",
+    "MIC1", "Mic",
+    "Mic", "MBIAS";
+   status = "okay";
+  };
+ };
+};

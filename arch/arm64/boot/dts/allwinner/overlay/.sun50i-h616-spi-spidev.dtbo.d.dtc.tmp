@@ -1,0 +1,1 @@
+arch/arm64/boot/dts/allwinner/overlay/sun50i-h616-spi-spidev.dtbo: arch/arm64/boot/dts/allwinner/overlay/.sun50i-h616-spi-spidev.dtbo.dts.tmp

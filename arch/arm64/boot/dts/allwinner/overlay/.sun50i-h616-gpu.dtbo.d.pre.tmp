@@ -1,0 +1,2 @@
+sun50i-h616-gpu.o: \
+ arch/arm64/boot/dts/allwinner/overlay/sun50i-h616-gpu.dtso

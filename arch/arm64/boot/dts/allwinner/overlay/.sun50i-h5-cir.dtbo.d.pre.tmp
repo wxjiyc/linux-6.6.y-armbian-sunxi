@@ -1,0 +1,1 @@
+sun50i-h5-cir.o: arch/arm64/boot/dts/allwinner/overlay/sun50i-h5-cir.dtso

@@ -1,0 +1,64 @@
+# 0 "arch/arm64/boot/dts/allwinner/overlay/sun50i-h5-cpu-clock-1.3GHz-1.3v.dtso"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "arch/arm64/boot/dts/allwinner/overlay/sun50i-h5-cpu-clock-1.3GHz-1.3v.dtso"
+
+
+/dts-v1/;
+/plugin/;
+
+/ {
+ fragment@0 {
+  target = <&cpu_opp_table>;
+
+  __overlay__ {
+   compatible = "operating-points-v2";
+   opp-shared;
+
+
+
+
+   opp-1056000000 {
+    opp-hz = /bits/ 64 <1056000000>;
+    opp-microvolt = <1300000 1300000 1300000>;
+    clock-latency-ns = <244144>;
+   };
+
+   opp-1104000000 {
+    opp-hz = /bits/ 64 <1104000000>;
+    opp-microvolt = <1300000 1300000 1300000>;
+    clock-latency-ns = <244144>;
+   };
+
+   opp-1152000000 {
+    opp-hz = /bits/ 64 <1152000000>;
+    opp-microvolt = <1300000 1300000 1300000>;
+    clock-latency-ns = <244144>;
+   };
+
+   opp-1200000000 {
+    opp-hz = /bits/ 64 <1200000000>;
+    opp-microvolt = <1300000 1300000 1300000>;
+    clock-latency-ns = <244144>;
+   };
+
+   opp-1224000000 {
+    opp-hz = /bits/ 64 <1224000000>;
+    opp-microvolt = <1300000 1300000 1300000>;
+    clock-latency-ns = <244144>;
+   };
+
+   opp-1248000000 {
+    opp-hz = /bits/ 64 <1248000000>;
+    opp-microvolt = <1300000 1300000 1300000>;
+    clock-latency-ns = <244144>;
+   };
+
+   opp-1296000000 {
+    opp-hz = /bits/ 64 <1296000000>;
+    opp-microvolt = <1300000 1300000 1300000>;
+    clock-latency-ns = <244144>;
+   };
+  };
+ };
+};

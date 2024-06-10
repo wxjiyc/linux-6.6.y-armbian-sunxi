@@ -1,0 +1,38 @@
+# 0 "arch/arm64/boot/dts/allwinner/overlay/sun50i-h5-tve.dtso"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "arch/arm64/boot/dts/allwinner/overlay/sun50i-h5-tve.dtso"
+/dts-v1/;
+/plugin/;
+
+/ {
+ compatible = "allwinner,sun8i-h5";
+
+ fragment@0 {
+  target = <&de>;
+  __overlay__ {
+   status = "okay";
+  };
+ };
+
+ fragment@1 {
+  target = <&mixer1>;
+  __overlay__ {
+   status = "okay";
+  };
+ };
+
+ fragment@2 {
+  target = <&tcon1>;
+   __overlay__ {
+   status = "okay";
+  };
+ };
+
+ fragment@3 {
+  target = <&tve>;
+  __overlay__ {
+   status = "okay";
+  };
+ };
+};

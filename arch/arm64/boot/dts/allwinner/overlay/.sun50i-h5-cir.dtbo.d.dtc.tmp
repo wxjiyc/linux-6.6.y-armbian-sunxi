@@ -1,0 +1,1 @@
+arch/arm64/boot/dts/allwinner/overlay/sun50i-h5-cir.dtbo: arch/arm64/boot/dts/allwinner/overlay/.sun50i-h5-cir.dtbo.dts.tmp

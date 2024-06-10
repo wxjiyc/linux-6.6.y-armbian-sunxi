@@ -1,0 +1,2 @@
+sun50i-h5-analog-codec.o: \
+ arch/arm64/boot/dts/allwinner/overlay/sun50i-h5-analog-codec.dtso

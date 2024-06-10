@@ -1,0 +1,17 @@
+# 0 "arch/arm64/boot/dts/allwinner/overlay/sun50i-h616-ir.dtso"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "arch/arm64/boot/dts/allwinner/overlay/sun50i-h616-ir.dtso"
+/dts-v1/;
+/plugin/;
+
+/ {
+ compatible = "allwinner,sun50i-h616";
+
+ fragment@0 {
+  target = <&ir>;
+  __overlay__ {
+   status = "okay";
+  };
+ };
+};

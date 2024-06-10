@@ -1,0 +1,45 @@
+# 0 "arch/arm64/boot/dts/allwinner/overlay/sun50i-a64-spi-add-cs1.dtso"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "arch/arm64/boot/dts/allwinner/overlay/sun50i-a64-spi-add-cs1.dtso"
+/dts-v1/;
+/plugin/;
+
+/ {
+ compatible = "allwinner,sun50i-a64";
+
+ fragment@0 {
+  target = <&pio>;
+  __overlay__ {
+   spi0_cs1: spi0_cs1 {
+    pins = "PB6";
+    function = "gpio_out";
+    output-high;
+   };
+
+   spi1_cs1: spi1_cs1 {
+    pins = "PD6";
+    function = "gpio_out";
+    output-high;
+   };
+  };
+ };
+
+ fragment@1 {
+  target = <&spi0>;
+  __overlay__ {
+   pinctrl-names = "default", "default";
+   pinctrl-1 = <&spi0_cs1>;
+   cs-gpios = <0>, <&pio 1 6 0>;
+  };
+ };
+
+ fragment@2 {
+  target = <&spi1>;
+  __overlay__ {
+   pinctrl-names = "default", "default";
+   pinctrl-1 = <&spi1_cs1>;
+   cs-gpios = <0>, <&pio 3 6 0>;
+  };
+ };
+};

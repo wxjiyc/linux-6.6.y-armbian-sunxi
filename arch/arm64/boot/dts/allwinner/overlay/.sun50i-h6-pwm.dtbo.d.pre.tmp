@@ -1,0 +1,1 @@
+sun50i-h6-pwm.o: arch/arm64/boot/dts/allwinner/overlay/sun50i-h6-pwm.dtso

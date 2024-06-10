@@ -1,0 +1,2 @@
+sun50i-a64-uart4.o: \
+ arch/arm64/boot/dts/allwinner/overlay/sun50i-a64-uart4.dtso

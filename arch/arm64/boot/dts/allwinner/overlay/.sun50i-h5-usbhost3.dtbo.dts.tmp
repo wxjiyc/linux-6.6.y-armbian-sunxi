@@ -1,0 +1,31 @@
+# 0 "arch/arm64/boot/dts/allwinner/overlay/sun50i-h5-usbhost3.dtso"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "arch/arm64/boot/dts/allwinner/overlay/sun50i-h5-usbhost3.dtso"
+/dts-v1/;
+/plugin/;
+
+/ {
+ compatible = "allwinner,sun50i-h5";
+
+ fragment@0 {
+  target = <&ehci3>;
+  __overlay__ {
+   status = "okay";
+  };
+ };
+
+ fragment@1 {
+  target = <&ohci3>;
+   __overlay__ {
+   status = "okay";
+  };
+ };
+
+ fragment@2 {
+  target = <&usbphy>;
+  __overlay__ {
+   status = "okay";
+  };
+ };
+};

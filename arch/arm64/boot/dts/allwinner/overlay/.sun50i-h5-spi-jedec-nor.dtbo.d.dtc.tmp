@@ -1,0 +1,1 @@
+arch/arm64/boot/dts/allwinner/overlay/sun50i-h5-spi-jedec-nor.dtbo: arch/arm64/boot/dts/allwinner/overlay/.sun50i-h5-spi-jedec-nor.dtbo.dts.tmp

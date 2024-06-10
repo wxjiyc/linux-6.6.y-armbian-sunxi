@@ -1,0 +1,2 @@
+sun50i-h5-spi-jedec-nor.o: \
+ arch/arm64/boot/dts/allwinner/overlay/sun50i-h5-spi-jedec-nor.dtso

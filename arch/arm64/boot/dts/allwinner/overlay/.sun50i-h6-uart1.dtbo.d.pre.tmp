@@ -1,0 +1,2 @@
+sun50i-h6-uart1.o: \
+ arch/arm64/boot/dts/allwinner/overlay/sun50i-h6-uart1.dtso

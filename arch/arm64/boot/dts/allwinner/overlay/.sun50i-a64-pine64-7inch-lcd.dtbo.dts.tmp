@@ -1,0 +1,94 @@
+# 0 "arch/arm64/boot/dts/allwinner/overlay/sun50i-a64-pine64-7inch-lcd.dtso"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "arch/arm64/boot/dts/allwinner/overlay/sun50i-a64-pine64-7inch-lcd.dtso"
+/dts-v1/;
+/plugin/;
+
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h" 1
+# 5 "arch/arm64/boot/dts/allwinner/overlay/sun50i-a64-pine64-7inch-lcd.dtso" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h" 1
+# 6 "arch/arm64/boot/dts/allwinner/overlay/sun50i-a64-pine64-7inch-lcd.dtso" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/pwm/pwm.h" 1
+# 7 "arch/arm64/boot/dts/allwinner/overlay/sun50i-a64-pine64-7inch-lcd.dtso" 2
+
+/ {
+ compatible = "allwinner,sun50i-a64";
+
+ fragment@0 {
+  target = <&reg_ldo_io0>;
+
+  __overlay__ {
+   regulator-min-microvolt = <3300000>;
+   regulator-max-microvolt = <3300000>;
+   regulator-name = "vcc-ctp";
+   status = "okay";
+  };
+ };
+
+ fragment@1 {
+  target = <&i2c0>;
+
+  __overlay__ {
+   status = "okay";
+
+   gt911: touchscreen@5d {
+    compatible = "goodix,gt911";
+    reg = <0x5d>;
+
+    interrupt-parent = <&pio>;
+    interrupts = <7 4 1>;
+    reset-gpios = <&pio 7 11 0>;
+    AVDD28-supply = <&reg_ldo_io0>;
+   };
+  };
+ };
+
+ fragment@2 {
+  target = <&r_pwm>;
+
+  __overlay__ {
+   status = "okay";
+  };
+ };
+
+ fragment@3 {
+  target-path = "/";
+
+  __overlay__ {
+   backlight: backlight {
+    compatible = "pwm-backlight";
+    pwms = <&r_pwm 0 50000 (1 << 0)>;
+    brightness-levels = <1 2 4 8 16 32 64 128 512>;
+    default-brightness-level = <8>;
+    enable-gpios = <&pio 7 10 0>;
+   };
+  };
+ };
+
+ fragment@4 {
+  target = <&dsi>;
+
+  __overlay__ {
+   vcc-dsi-supply = <&reg_dldo1>;
+   status = "okay";
+
+   panel@0 {
+    compatible = "feiyang,fy07024di26a30d";
+    reg = <0>;
+    avdd-supply = <&reg_dc1sw>;
+    dvdd-supply = <&reg_dldo2>;
+    reset-gpios = <&pio 3 24 0>;
+    backlight = <&backlight>;
+   };
+  };
+ };
+
+ fragment@5 {
+  target = <&dphy>;
+
+  __overlay__ {
+   status = "okay";
+  };
+ };
+};

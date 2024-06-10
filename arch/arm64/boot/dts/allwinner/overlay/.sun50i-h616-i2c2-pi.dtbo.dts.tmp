@@ -1,0 +1,27 @@
+# 0 "arch/arm64/boot/dts/allwinner/overlay/sun50i-h616-i2c2-pi.dtso"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "arch/arm64/boot/dts/allwinner/overlay/sun50i-h616-i2c2-pi.dtso"
+/dts-v1/;
+/plugin/;
+
+
+/ {
+ compatible = "allwinner,sun50i-h616";
+
+ fragment@0 {
+  target = <&i2c2>;
+  __overlay__ {
+   pinctrl-names = "default";
+   pinctrl-0 = <&i2c2_pi_pins>;
+   status = "okay";
+  };
+ };
+
+ fragment@1 {
+  target = <&uart3>;
+  __overlay__ {
+   status = "disabled";
+  };
+ };
+};

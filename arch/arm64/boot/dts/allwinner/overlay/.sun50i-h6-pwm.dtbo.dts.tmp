@@ -1,0 +1,29 @@
+# 0 "arch/arm64/boot/dts/allwinner/overlay/sun50i-h6-pwm.dtso"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "arch/arm64/boot/dts/allwinner/overlay/sun50i-h6-pwm.dtso"
+/dts-v1/;
+/plugin/;
+
+/ {
+ compatible = "allwinner,sun50i-h6-pwm";
+
+ fragment@0 {
+  target = <&pio>;
+  __overlay__ {
+   pwm_pin: pwm-pin {
+    pins = "PD22";
+    function = "pwm";
+   };
+  };
+ };
+
+ fragment@1 {
+  target = <&pwm>;
+  __overlay__ {
+   pinctrl-names = "default";
+   pinctrl-0 = <&pwm_pin>;
+   status = "okay";
+  };
+ };
+};

@@ -1,0 +1,1 @@
+arch/arm64/boot/dts/allwinner/overlay/sun50i-a64-i2c0.dtbo: arch/arm64/boot/dts/allwinner/overlay/.sun50i-a64-i2c0.dtbo.dts.tmp

@@ -1,0 +1,24 @@
+# 0 "arch/arm64/boot/dts/allwinner/overlay/sun50i-h6-i2c2.dtso"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "arch/arm64/boot/dts/allwinner/overlay/sun50i-h6-i2c2.dtso"
+/dts-v1/;
+/plugin/;
+
+/ {
+ compatible = "allwinner,sun50i-h6";
+
+ fragment@0 {
+  target-path = "/aliases";
+  __overlay__ {
+   i2c2 = "/soc/i2c@5002800";
+  };
+ };
+
+ fragment@1 {
+  target = <&i2c2>;
+  __overlay__ {
+   status = "okay";
+  };
+ };
+};

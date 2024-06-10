@@ -1,0 +1,1 @@
+savedcmd_arch/arm64/boot/dts/allwinner/overlay/sun50i-h616-fixup.scr := mkimage -C none -A arm64 -T script -d arch/arm64/boot/dts/allwinner/overlay/sun50i-h616-fixup.scr-cmd arch/arm64/boot/dts/allwinner/overlay/sun50i-h616-fixup.scr

@@ -1,0 +1,1 @@
+arch/arm64/boot/dts/allwinner/overlay/sun50i-a64-spi-add-cs1.dtbo: arch/arm64/boot/dts/allwinner/overlay/.sun50i-a64-spi-add-cs1.dtbo.dts.tmp

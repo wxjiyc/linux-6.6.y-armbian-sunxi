@@ -1,0 +1,2 @@
+sun50i-h5-cpu-clock-1.3GHz-1.3v.o: \
+ arch/arm64/boot/dts/allwinner/overlay/sun50i-h5-cpu-clock-1.3GHz-1.3v.dtso
